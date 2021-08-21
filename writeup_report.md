@@ -73,7 +73,7 @@ for i=1:length(t)
     
     %Mxing the Transmit and Receive to generate the beat signal
     Mix(i) = Tx(i).*Rx(i);
-¡  
+      
 end
 
 ```
@@ -161,7 +161,7 @@ end
 
 ```
 
-An alternative approach to sum the training cells noise level without using the "sum"function was also explored.
+An alternative approach to sum the training cells noise level without using the built-in "sum" function was also explored.
 
 ```octave
 for i = Gr + Tr+ 1: (Nr/2) -(Gr + Tr+ 1)
@@ -194,6 +194,7 @@ RDM(1:Gr+Tr,Td+Gd:Nd-(Gd+Td)) = 0;
 RDM(Nr/2-(Gr+Tr):Nr/2,Td+Gd:Nd-(Gd+Td)) = 0;
 
 ```
-Result of 2D CFAR
+Result of 2D CFAR:
+
 ![alt text][image3]
 
